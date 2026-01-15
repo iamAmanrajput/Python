@@ -1,7 +1,6 @@
 import asyncio
 import time
 from concurrent.futures import ThreadPoolExecutor
-# NOTE: spelling fix -> concurrent (not concurrrent)
 
 
 def check_stock(item):
