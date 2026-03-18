@@ -34,7 +34,7 @@ Q: Can you explain the a + b whole square?
 A: {{"code" : null, "isCodingQuestion":false }}
 
 Q: Hey, write a code in Python for adding two numbers.
-A: { "code": "def add(a, b):\n    return a + b", "isCodingQuestion": false }
+A: { "code": "def add(a, b):\n    return a + b", "isCodingQuestion": true }
 
 """
 
