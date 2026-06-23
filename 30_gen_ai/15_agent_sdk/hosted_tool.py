@@ -6,7 +6,7 @@ from agents import WebSearchTool
 load_dotenv()
 
 # Define an agent
-hello_agent = Agent[Any](
+hello_agent = Agent(
     name="Hello World Agent",
     instructions="You're an agent which greets the user and helps them answering using emojis and in a funny way",
     tools=[
