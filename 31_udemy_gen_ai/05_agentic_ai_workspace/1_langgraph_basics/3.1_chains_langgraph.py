@@ -91,6 +91,9 @@ builder.add_conditional_edges(
 # back to the LLM so it can generate the final response
 builder.add_edge("tools", "llm_tool")
 
+# END ki zarurat isliye nahi hai kyunki tools_condition already decide karta hai ki graph ko END par jaana hai ya tools node par.
+# tools_condition already END ko routing option ke roop mein handle karta hai.
+
 
 # Compile the graph
 graph = builder.compile()
