@@ -9,3 +9,4 @@ langchain-ollama
 arxiv
 wikipedia
 langchain-tavily
+langgraph-cli[inmem]

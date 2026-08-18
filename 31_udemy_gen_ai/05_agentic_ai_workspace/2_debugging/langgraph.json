@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "ollama_agent": "./ollama_agent.py:agent"
+  },
+  "env": "../.env"
+}
