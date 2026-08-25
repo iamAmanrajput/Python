@@ -144,3 +144,66 @@ for event in graph.stream(
 # ================================ Human Message =================================
 
 # Multiply 2 and 3
+
+# Execution stops before the assistant node because
+# we set interrupt_before=["assistant"].
+# The current state is saved as a checkpoint.
+
+# Continue the Execution to Assistant 
+for event in graph.stream(
+    None,
+    thread,
+    stream_mode="values"
+):
+    event["messages"][-1].pretty_print()
+
+# ================================ Human Message =================================
+
+# Multiply 2 and 3
+# ================================ Human Message =================================
+
+# Multiply 2 and 3
+# ================================== Ai Message ==================================
+# Tool Calls:
+#   multiply (3gz79c6q8)
+#  Call ID: 3gz79c6q8
+#   Args:
+#     a: 2
+#     b: 3
+# ================================= Tool Message =================================
+# Name: multiply
+
+# 6
+
+# Continue the execution of Assistant and then end
+for event in graph.stream(
+    None,
+    thread,
+    stream_mode="values"
+):
+    event["messages"][-1].pretty_print()
+
+# ================================ Human Message =================================
+
+# Multiply 2 and 3
+# ================================ Human Message =================================
+
+# Multiply 2 and 3
+# ================================== Ai Message ==================================
+# Tool Calls:
+#   multiply (deg1d7s0n)
+#  Call ID: deg1d7s0n
+#   Args:
+#     a: 2
+#     b: 3
+# ================================= Tool Message =================================
+# Name: multiply
+
+# 6
+# ================================= Tool Message =================================
+# Name: multiply
+
+# 6
+# ================================== Ai Message ==================================
+
+# The result of multiplying 2 and 3 is 6.
