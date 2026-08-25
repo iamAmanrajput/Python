@@ -144,3 +144,33 @@ for event in graph.stream(None, thread, stream_mode="values"):
 # Name: multiply
 
 # 50
+
+# Continue the graph execution
+for event in graph.stream(None, thread, stream_mode="values"):
+    event["messages"][-1].pretty_print()
+
+# ================================ Human Message =================================
+
+# Multiply 2 and 3
+# Tell me how you want to update the state:please multiply 200 and 300
+# ================================ Human Message =================================
+
+# please multiply 200 and 300
+# ================================== Ai Message ==================================
+# Tool Calls:
+#   multiply (0ejv7eh20)
+#  Call ID: 0ejv7eh20
+#   Args:
+#     a: 200
+#     b: 300
+# ================================= Tool Message =================================
+# Name: multiply
+
+# 60000
+# ================================= Tool Message =================================
+# Name: multiply
+
+# 60000
+# ================================== Ai Message ==================================
+
+# The result of multiplying 200 and 300 is 60,000.
